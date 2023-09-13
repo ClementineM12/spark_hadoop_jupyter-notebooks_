@@ -28,9 +28,8 @@ ENV HADOOP_HOME=/opt/hadoop
 ENV PATH $HADOOP_PREFIX/bin/:$PATH
 ENV PATH $HADOOP_HOME/bin/:$PATH
 
-COPY /downloads/hadoop-3.2.1.tar.gz /tmp/hadoop.tar.gz
-
 RUN set -x \
+    && curl -fSL "${HADOOP_URL}" -o  /tmp/hadoop.tar.gz \
     && tar -xvf /tmp/hadoop.tar.gz -C /opt/ \
     && rm /tmp/hadoop.tar.gz* \
     && mv /opt/hadoop-3.2.1 /opt/hadoop
@@ -61,9 +60,8 @@ ENV PATH $SPARK_HOME/bin:$PATH
 ENV PYSPARK_PYTHON=python3
 ENV PYTHONHASHSEED=1
 
-COPY /downloads/spark-3.1.1-bin-hadoop3.2.tgz /tmp/spark.tar.gz
-
 RUN set -x \
+    && curl -fSL "${SPARK_URL}" -o  /tmp/spark.tar.gz \
     && tar -xvzf /tmp/spark.tar.gz -C /opt/ \
     && rm /tmp/spark.tar.gz* \
     && mv /opt/spark-3.1.1-bin-hadoop3.2 /opt/spark
