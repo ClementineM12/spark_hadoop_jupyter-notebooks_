@@ -1,12 +1,8 @@
 wheel
 setuptools
 pathlib
-minio
 pyYAML
 py4j
 numpy
 pandas
 pyspark==3.1.1
-apache-airflow-providers-apache-spark
-apache-airflow-providers-apache-hdfs
-apache-airflow-providers-http
