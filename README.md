@@ -12,14 +12,14 @@ Repository
 │   ├── mapred-site.xml
 │   └── yarn-site.xml
 ├── docker
-│   ├── hadoop
+│   ├── hadoop (Version 3.2.1)
 │   │   ├── datanode
 │   │   ├── history-server
 │   │   ├── namenode
 │   │   ├── node-manager
 │   │   └── resource-manager
 │   ├── jupyter
-│   └── spark
+│   └── spark (Version 3.1.1)
 ├── envs
 │   └── hadoop.env
 ├── mnt/notebooks
