@@ -3,6 +3,36 @@
 This configuration allows you to seamlessly run Python code alongside Spark, enabling powerful data processing and analysis. It combines the distributed computing capabilities 
 of Spark with the flexibility and interactivity of Jupyter Notebook, making it easier to work with big data and perform data transformations, analysis, and machine learning tasks efficiently.
 
+## Directory structure
+```
+Repository
+├── conf
+│   ├── core-site.xml
+│   ├── hdfs-site.xml
+│   ├── mapred-site.xml
+│   └── yarn-site.xml
+├── docker
+│   ├── hadoop
+│   │   ├── datanode
+│   │   ├── history-server
+│   │   ├── namenode
+│   │   ├── node-manager
+│   │   └── resource-manager
+│   ├── jupyter
+│   └── spark
+├── envs
+│   └── hadoop.env
+├── mnt/notebooks
+│   ├── data (include the data you want to use inside the jupyter notebooks)
+│   └── .ipynb scripts 
+├── .env
+├── Dockerfile (for hadoop-spark base)
+├── docker-compose-cluster.yml
+├── entrypoint.sh (for Dockerfile)
+├── requirements.txt (called inside the Dockerfile)
+├── run-cluster.sh (to start the containers)
+└── stop-cluster.sh (to stop or remove containers)
+```
 ## Running the Cluster
 
 To start the Spark cluster on the Yarn Hadoop cluster with Jupyter Notebook integration, follow these steps:
