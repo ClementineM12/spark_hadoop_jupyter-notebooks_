@@ -40,7 +40,7 @@ To start the Spark cluster on the Yarn Hadoop cluster with Jupyter Notebook inte
 1. Clone this repository to your local machine (if you haven't already):
 
     ```bash
-    gh repo clone ClementineM12/spark_hadoop_jupyter-notebooks_
+    gh repo clone [ClementineM12/spark_hadoop_jupyter-notebooks_](https://github.com/ClementineM12/spark_hadoop_jupyter-notebooks_.git)
     ```
 
 2. Navigate to the project directory.
